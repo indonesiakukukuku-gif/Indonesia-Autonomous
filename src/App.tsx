@@ -7,6 +7,7 @@ import ThreatLaboratory from './components/ThreatLaboratory';
 import StrategicCounsel from './components/StrategicCounsel';
 import CivLongevity from './components/CivLongevity';
 import CivilizationOS from './components/CivilizationOS';
+import ConstitutionalCouncil from './components/ConstitutionalCouncil';
 
 import { 
   Network, 
@@ -401,6 +402,19 @@ export default function App() {
               <Sparkles className="w-4 h-4 text-indigo-400" />
               6. COOPERATIVE COUNSEL
             </button>
+
+            <button
+              id="tab-constitutional-council"
+              onClick={() => setActiveTab('constitutional-council')}
+              className={`cursor-pointer px-4 py-2 rounded-lg text-xs font-mono font-bold flex items-center gap-2 transition ${
+                activeTab === 'constitutional-council'
+                  ? 'bg-gradient-to-r from-indigo-500/25 to-pink-500/25 border border-indigo-500/60 text-indigo-200'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <Award className="w-4 h-4 text-indigo-400 animate-pulse" />
+              7. CONSTITUTIONAL COUNCIL
+            </button>
           </div>
 
           {/* Active Tab rendering */}
@@ -424,6 +438,9 @@ export default function App() {
             )}
             {activeTab === 'strategic-counsel' && <StrategicCounsel state={state} />}
             {activeTab === 'longevity' && <CivLongevity />}
+            {activeTab === 'constitutional-council' && (
+              <ConstitutionalCouncil state={state} onChangeState={setState} />
+            )}
             
             {activeTab === 'audit-ledger' && (
               <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl shadow-xl space-y-6 animate-fade-in">

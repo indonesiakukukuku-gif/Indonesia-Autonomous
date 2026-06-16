@@ -1,5 +1,5 @@
 {
-  "name": "Sovereign Civilization Simulator",
+  "name": "Indonesia Autonomous",
   "description": "An interactive multi-system simulator and auditing cockpit designed to stress-test \"The Unified Living Sovereign Civilization Architecture\" across 200 years under economic, political, cybersecurity, and global risks.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
